@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Excelfast Advanced Technologies — Next.js site
 
-## Getting Started
+Next.js 16 (App Router, TypeScript, Tailwind v4, Framer Motion). The page content is
+carried over from the original static `excelfast_site/index.html`; the visual language,
+layout and motion are new.
 
-First, run the development server:
+## Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | What's on it |
+| --- | --- |
+| `/` | Hero, marquee, Services, MRO, After-sales, Distribution, Core engineering, Process, Industries, Careers, Contact, team photo |
+| `/about` | About us, the COO feature (Deepak Bidare), About the team, and the nine remaining team cards. Linked from the nav and footer. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things live
 
-## Learn More
+| What | File |
+| --- | --- |
+| All page copy (hero, services, MRO, industries, footer…) | `src/data/site.ts` |
+| Team roster, roles, EMP IDs | `src/data/team.ts` |
+| Tilt + click-to-flip 3D card | `src/components/FlipCard.tsx` |
+| Service cards (front/back) | `src/components/Services.tsx` |
+| COO feature card | `src/components/Leadership.tsx` |
+| Auto-scrolling industries rail | `src/components/Industries.tsx` + `.ef-rail*` in `globals.css` |
+| Closing team photo (full-bleed, B&W) | `src/components/TeamPhoto.tsx`, `public/team/team-group.jpg` |
+| Logo mark (nav, hero watermark, section watermarks) | `src/components/Logo.tsx` |
+| Brand tokens, fonts, marquee/float keyframes | `src/app/globals.css` |
+| Photos | `public/team/*.jpg` |
 
-To learn more about Next.js, take a look at the following resources:
+## The flip card
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`FlipCard` takes any `front` and `back` node, so the same pointer-tilt + flip motion is
+reused by the five service cards, the COO card and the team cards. Adjust `tiltStrength`
+and `aspect` per use.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## The industries rail
 
-## Deploy on Vercel
+`.ef-rail` scrolls itself with a CSS marquee (46s) and pauses on hover or keyboard
+focus. Its scrollbar is hidden and the card list is rendered twice so the loop is
+seamless — change the speed in `globals.css` (`.ef-rail-track`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Swapping a team photo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Drop a portrait into `public/team/` — 3:4 crop, head near the top, ~900×1200 px.
+2. Point the matching entry in `src/data/team.ts` at it (`photo: "/team/<file>.jpg"`).
+
+Two roster entries ship with `photo: null` and render a blank placeholder — the ID card
+artwork only listed eight people. Fill in the last two when they're confirmed.
+
+## Brand values
+
+- Orange `#f96902`, ink `#0e0e0e`, bone `#eeebeb` — sampled from the ExcelFast artwork.
+- Display face **Poppins**, body **Inter**, labels **JetBrains Mono**.
+
+## Before launch
+
+- Wire the contact form (`src/components/Contact.tsx`) to a mailer or CRM.
+- Replace the Unsplash photography in `src/data/site.ts` with real Excelfast imagery,
+  then drop `images.remotePatterns` from `next.config.ts`.
+- Replace the traced mark in `src/components/Logo.tsx` with the official vector logo.
+- Add a real LinkedIn URL in `src/data/site.ts` (`footer.columns`).
+- The careers block links to the contact form. If you port the original `careers.html`
+  into a `/careers` route, repoint `careers.ctaHref` in `src/data/site.ts`.

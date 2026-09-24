@@ -1,0 +1,38 @@
+/**
+ * ExcelFast mark — vector-traced from the mark used on the official ID card.
+ * Uses `currentColor`, so colour it with a text class.
+ */
+export function Mark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 41 38"
+      aria-hidden="true"
+      className={className}
+      fill="currentColor"
+    >
+      <path fillRule="evenodd" d="M0.00 11.51L1.62 10.43L13.75 7.39L19.38 5.47L25.38 4.36L32.25 1.97L34.75 1.32L35.85 1.88L36.12 2.50L35.85 4.62L33.78 11.75L33.00 13.11L32.12 13.00L30.38 11.18L29.38 10.90L19.38 13.49L17.87 14.25L21.88 18.12L23.88 21.00L25.10 23.25L26.79 28.00L27.43 31.38L27.45 34.50L26.76 36.62L25.55 37.88ZM29.88 27.42L29.12 27.41L28.29 26.62L25.62 20.30L22.64 16.12L23.03 15.38L24.12 14.81L26.50 14.36L28.88 13.38L30.38 13.50L31.12 14.85L32.38 15.88L34.50 14.63L35.50 14.71L39.35 18.38L40.53 20.25L39.50 21.21L36.88 22.11L33.25 24.17L29.88 27.42ZM20.11 37.88L19.37 36.12L19.33 29.38L17.75 25.53L14.88 22.07L12.88 20.34L10.62 19.18L6.50 17.98L5.25 17.92L3.38 18.48L0.00 18.03Z" />
+    </svg>
+  );
+}
+
+export function Wordmark({
+  className = "",
+  stacked = true,
+}: {
+  className?: string;
+  stacked?: boolean;
+}) {
+  return (
+    <span className={`flex items-center gap-2.5 ${className}`}>
+      <Mark className="h-7 w-7 shrink-0 text-[var(--ef-orange)]" />
+      <span className={stacked ? "leading-none" : "leading-none"}>
+        <span className="ef-display block text-[1.15rem] tracking-[-0.02em]">
+          ExcelFast
+        </span>
+        <span className="mt-[3px] block font-[var(--font-poppins)] text-[0.6rem] font-semibold tracking-[0.04em] text-[#cfcfcf]">
+          Advanced Technologies
+        </span>
+      </span>
+    </span>
+  );
+}
