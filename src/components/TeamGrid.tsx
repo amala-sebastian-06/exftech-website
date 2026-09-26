@@ -68,6 +68,7 @@ export function TeamGrid({
   title?: string;
 } = {}) {
   const reduce = useReducedMotion();
+  const [featured, ...rest] = members;
 
   return (
     <section id="team" className="relative scroll-mt-20 py-24 sm:py-32">
@@ -89,8 +90,26 @@ export function TeamGrid({
           </Reveal>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8">
-          {members.map((m, i) => (
+        {featured && (
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 40, rotateX: 12 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="mx-auto mt-16 w-full max-w-[300px] sm:max-w-[340px]"
+          >
+            <FlipCard
+              label={`${featured.firstName} ${featured.lastName}`}
+              aspect="3 / 4"
+              tiltStrength={9}
+              front={<Front m={featured} />}
+              back={<Back m={featured} />}
+            />
+          </motion.div>
+        )}
+
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8">
+          {rest.map((m, i) => (
             <motion.div
               key={`${m.empId}-${i}`}
               initial={reduce ? false : { opacity: 0, y: 40, rotateX: 12 }}

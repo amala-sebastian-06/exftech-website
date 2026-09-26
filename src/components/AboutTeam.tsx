@@ -68,7 +68,7 @@ export function AboutTeam() {
             <div className="ef-notch relative h-full overflow-hidden border border-white/10 bg-[#121212] p-7 sm:p-9">
               <span
                 aria-hidden
-                className="pointer-events-none absolute -right-[14%] -top-[18%] w-[52%] text-white/[0.03]"
+                className="pointer-events-none absolute -right-[14%] -top-[18%] w-[52%] opacity-[0.06]"
               >
                 <Mark className="w-full" />
               </span>

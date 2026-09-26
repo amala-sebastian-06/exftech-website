@@ -22,7 +22,7 @@ export function AboutUs() {
     >
       <motion.div
         style={{ y: driftY, rotate: spin }}
-        className="pointer-events-none absolute -right-[12%] top-[8%] w-[46%] text-white/[0.025]"
+        className="pointer-events-none absolute -right-[12%] top-[8%] w-[46%] opacity-[0.05]"
       >
         <Mark className="w-full" />
       </motion.div>

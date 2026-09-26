@@ -33,7 +33,7 @@ export default function AboutPage() {
         <Leadership />
         <AboutTeam />
         <TeamGrid
-          members={team.slice(1)}
+          members={team}
           eyebrow="The team"
           title="Engineers, technicians and the people who answer the phone."
         />

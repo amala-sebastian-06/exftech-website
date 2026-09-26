@@ -35,9 +35,20 @@ export function Hero() {
           className="object-cover"
         />
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0e0e0e]/94 via-[#0e0e0e]/82 to-[#0e0e0e]" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0e0e0e]/82 via-[#0e0e0e]/55 to-[#0e0e0e]/92" />
       <div
-        className="absolute inset-0 -z-10 opacity-[0.12]"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 65% 55% at 74% 26%, rgba(249,105,2,0.18), transparent 65%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{ boxShadow: "inset 0 0 220px 50px rgba(0,0,0,0.55)" }}
+      />
+      <div
+        className="absolute inset-0 -z-10 opacity-[0.16]"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px)",
@@ -53,7 +64,7 @@ export function Hero() {
         style={{ y: markY, rotate: markRotate, opacity: fade }}
         className="pointer-events-none absolute -right-[12%] top-1/2 hidden w-[46%] -translate-y-1/2 md:block lg:-right-[8%] lg:w-[38%]"
       >
-        <Mark className="w-full text-white/[0.035]" />
+        <Mark className="w-full opacity-[0.07]" />
       </motion.div>
 
       <motion.div

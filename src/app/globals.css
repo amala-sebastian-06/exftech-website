@@ -119,11 +119,18 @@ h2.ef-display {
 
 .ef-3d {
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
+/* Each face (and the clip-path notch inside it) gets its own composited
+   GPU layer via the translateZ offset set inline. Without this, Chromium
+   recomputes the clip-path mask against the live 3D matrix every frame,
+   which is what flickers hardest as the tilt swings wide near the edges. */
 .ef-backface {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 /* Marquee */
