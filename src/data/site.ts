@@ -105,7 +105,117 @@ export const services: Service[] = [
       "Build. Test. Improve.",
     ],
   },
+  {
+    no: "06",
+    name: "Market Research",
+    desc: "Market, competitor and customer research that helps industrial companies decide what to build, sell, source and where to enter.",
+    href: "/services/market-research",
+    icon: "chart",
+    detail: [
+      "Market sizing & demand study",
+      "Competitor & pricing benchmarks",
+      "Customer & plant-floor interviews",
+      "Supplier & sourcing intelligence",
+    ],
+  },
 ];
+
+export const marketResearch = {
+  eyebrow: "Market research / Decisions backed by evidence",
+  title: "We support companies with market research that engineers can trust.",
+  lede: "Most market research is written by people who have never opened a machine. Ours is run by the same engineers who design, repair and source industrial equipment — so the questions we ask, and the answers we bring back, hold up on the shop floor as well as in the boardroom.",
+  intro: [
+    "Whether you are launching a new industrial product, entering a new region or segment, evaluating a supplier, or deciding whether a technology is worth adopting, we help you replace assumptions with evidence.",
+    "We work with manufacturers, OEMs, distributors, start-ups and technology suppliers — scoping the research around the decision you actually need to make, not a generic report template.",
+  ],
+  areas: [
+    {
+      n: "01",
+      t: "Market sizing & demand analysis",
+      d: "How big is the opportunity, who buys, how often, and what is driving or slowing demand. We build the picture bottom-up from real buyers and applications rather than recycled headline figures.",
+      points: [
+        "Addressable market and segment mapping",
+        "Demand drivers, seasonality and growth outlook",
+        "Application and end-use analysis by industry",
+      ],
+    },
+    {
+      n: "02",
+      t: "Competitor & pricing intelligence",
+      d: "Who else serves your customers, what they offer, how they price and where they are weak. Useful for positioning a new product or defending an existing one.",
+      points: [
+        "Competitor profiles, offerings and positioning",
+        "Price and cost benchmarking",
+        "Strengths, gaps and white-space opportunities",
+      ],
+    },
+    {
+      n: "03",
+      t: "Customer & voice-of-the-plant research",
+      d: "Structured conversations with the engineers, maintenance heads and buyers who actually use and purchase the equipment — capturing real pain points, buying criteria and unmet needs.",
+      points: [
+        "Interviews and on-site discussions",
+        "Surveys and buying-criteria ranking",
+        "Pain-point and unmet-need mapping",
+      ],
+    },
+    {
+      n: "04",
+      t: "Product & technology feasibility",
+      d: "Before you commit to development or import, we test whether a product or technology fits the market — technically, commercially and operationally.",
+      points: [
+        "Product-market fit and concept validation",
+        "Technology scouting and comparison",
+        "Build vs. buy vs. partner assessment",
+      ],
+    },
+    {
+      n: "05",
+      t: "Supplier, sourcing & distribution landscape",
+      d: "A clear view of who makes what, lead times, cost structure and channel options — so sourcing and distribution decisions are made with the full picture.",
+      points: [
+        "Vendor identification and shortlisting",
+        "Channel and distribution mapping",
+        "Import, localisation and cost considerations",
+      ],
+    },
+    {
+      n: "06",
+      t: "Market entry & growth strategy",
+      d: "Translating the findings into a practical plan: which segments to target first, how to position, how to price and what it takes to get a first customer.",
+      points: [
+        "Target segment and account prioritisation",
+        "Go-to-market and positioning recommendations",
+        "Pilot and launch roadmap",
+      ],
+    },
+  ],
+  process: [
+    { n: "01", t: "Define", d: "Agree the decision, the questions and what a useful answer looks like." },
+    { n: "02", t: "Collect", d: "Desk research, expert and customer interviews, surveys and site visits." },
+    { n: "03", t: "Analyse", d: "Cross-check sources, size the opportunity and stress-test assumptions." },
+    { n: "04", t: "Recommend", d: "Clear findings, options and a recommended course of action." },
+    { n: "05", t: "Support", d: "Stay on through execution — engineering, sourcing or launch support." },
+  ],
+  deliverables: [
+    "Market and competitor report with sources",
+    "Customer insight summary and key quotes",
+    "Pricing and cost benchmark sheet",
+    "Opportunity and risk assessment",
+    "Recommendation deck for leadership",
+    "Optional follow-through support from our engineering team",
+  ],
+  industries: [
+    "Manufacturing",
+    "Automotive",
+    "Aerospace",
+    "Energy",
+    "Additive / 3D printing",
+    "Industrial distribution",
+  ],
+  differentiator:
+    "Because we are an engineering and MRO company first, we can take research all the way through — from the first customer conversation to a working prototype, a sourced component or an installed machine.",
+};
 
 export const mro = {
   eyebrow: "MRO / Mission-critical support",
@@ -309,6 +419,7 @@ export const contact = {
     "After-Sales Support",
     "Distribution",
     "R&D / Development",
+    "Market Research",
   ],
 };
 
@@ -325,6 +436,7 @@ export const footer = {
         ["MRO", "/#mro"],
         ["After-sales", "/#support"],
         ["Distribution", "/#distribution"],
+        ["Market research", "/services/market-research"],
       ],
     },
     {
@@ -359,4 +471,5 @@ export type IconName =
   | "headphones"
   | "boxes"
   | "flask"
-  | "route";
+  | "route"
+  | "chart";

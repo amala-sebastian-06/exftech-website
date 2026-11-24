@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { FlipCard } from "./FlipCard";
 import { Icon } from "./Icons";
@@ -64,13 +65,13 @@ function Back({ s }: { s: Service }) {
         </ul>
       </div>
 
-      <a
+      <Link
         href={s.href}
         onClick={(e) => e.stopPropagation()}
         className="mt-6 inline-flex items-center gap-2 self-start border-b border-white/50 pb-1 text-[0.78rem] font-semibold transition-colors hover:border-white"
       >
         Read more <span aria-hidden>↗</span>
-      </a>
+      </Link>
     </div>
   );
 }
@@ -100,7 +101,7 @@ export function Services() {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <motion.div
               key={s.no}
@@ -109,7 +110,7 @@ export function Services() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{
                 duration: 0.8,
-                delay: (i % 5) * 0.08,
+                delay: (i % 3) * 0.08,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="mx-auto w-full max-w-[330px] sm:max-w-none"

@@ -13,6 +13,8 @@ const PATHS: Record<IconName, string> = {
     "M9 2h6v2h-1v5.2l5.3 9.2A2 2 0 0 1 17.6 21H6.4a2 2 0 0 1-1.7-2.6L10 9.2V4H9V2Zm3 9.6-2.9 5.1h5.8L12 11.6Z",
   route:
     "M5 3a3 3 0 0 1 1 5.8V11h5a4 4 0 0 1 4 4v1.2a3 3 0 1 1-2 0V15a2 2 0 0 0-2-2H6a3 3 0 0 1-3-3V8.8A3 3 0 0 1 5 3Z",
+  chart:
+    "M3 3h2v16h16v2H3V3Zm5 9h3v5H8v-5Zm5-5h3v10h-3V7Zm5 3h3v7h-3v-7Z",
 };
 
 export function Icon({
