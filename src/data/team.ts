@@ -5,7 +5,7 @@ export type Member = {
   lastName: string;
   role: string;
   empId: string;
-  /** File in /public/team — leave null to render the "seat open" card. */
+  /** File in /public/team: leave null to render the "seat open" card. */
   photo: string | null;
   /** Short line shown on the flipped side of the card. */
   focus: string;

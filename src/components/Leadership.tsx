@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FlipCard } from "./FlipCard";
+import { RevealCard } from "./RevealCard";
 import { Reveal } from "./motion-primitives";
 import { team, type Member } from "@/data/team";
 
@@ -39,7 +39,7 @@ function Front({ m }: { m: Member }) {
 
 function Back({ m }: { m: Member }) {
   return (
-    <div className="ef-notch-tl flex h-full flex-col justify-between bg-[var(--ef-orange)] p-7 text-white">
+    <div className="flex h-full flex-col justify-between bg-[var(--ef-orange)] p-7 text-white">
       <div>
         <span className="font-[family-name:var(--font-mono-ef)] text-[0.6rem] tracking-[0.22em] text-black/55">
           {m.empId}
@@ -73,10 +73,9 @@ export function Leadership() {
           transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto w-full max-w-[380px]"
         >
-          <FlipCard
+          <RevealCard
             label={`${coo.firstName} ${coo.lastName}`}
             aspect="3 / 4"
-            tiltStrength={10}
             front={<Front m={coo} />}
             back={<Back m={coo} />}
           />
@@ -98,7 +97,7 @@ export function Leadership() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="ef-lede mt-7 max-w-[58ch]">
-              Deepak runs delivery across every service line — engineering, MRO,
+              Deepak runs delivery across every service line: engineering, MRO,
               after-sales, distribution and R&amp;D. Scope, schedule and the technical
               call all land on the same desk, which is why a customer gets one answer
               instead of four.

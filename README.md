@@ -1,4 +1,4 @@
-# Excelfast Advanced Technologies — Next.js site
+# Excelfast Advanced Technologies: Next.js site
 
 Next.js 16 (App Router, TypeScript, Tailwind v4, Framer Motion). The page content is
 carried over from the original static `excelfast_site/index.html`; the visual language,
@@ -43,19 +43,19 @@ and `aspect` per use.
 
 `.ef-rail` scrolls itself with a CSS marquee (46s) and pauses on hover or keyboard
 focus. Its scrollbar is hidden and the card list is rendered twice so the loop is
-seamless — change the speed in `globals.css` (`.ef-rail-track`).
+seamless. Change the speed in `globals.css` (`.ef-rail-track`).
 
 ## Swapping a team photo
 
-1. Drop a portrait into `public/team/` — 3:4 crop, head near the top, ~900×1200 px.
+1. Drop a portrait into `public/team/`: 3:4 crop, head near the top, ~900×1200 px.
 2. Point the matching entry in `src/data/team.ts` at it (`photo: "/team/<file>.jpg"`).
 
-Two roster entries ship with `photo: null` and render a blank placeholder — the ID card
+Two roster entries ship with `photo: null` and render a blank placeholder; the ID card
 artwork only listed eight people. Fill in the last two when they're confirmed.
 
 ## Brand values
 
-- Orange `#f96902`, ink `#0e0e0e`, bone `#eeebeb` — sampled from the ExcelFast artwork.
+- Orange `#f96902`, ink `#0e0e0e`, bone `#eeebeb`, sampled from the ExcelFast artwork.
 - Display face **Poppins**, body **Inter**, labels **JetBrains Mono**.
 
 ## Before launch

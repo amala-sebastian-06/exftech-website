@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { FlipCard } from "./FlipCard";
+import { RevealCard } from "./RevealCard";
 import { Icon } from "./Icons";
 import { Reveal, RevealWords } from "./motion-primitives";
 import { services, type Service } from "@/data/site";
@@ -31,7 +31,7 @@ function Front({ s, i }: { s: Service; i: number }) {
           {s.desc}
         </p>
         <span className="mt-6 flex items-center gap-2 font-[family-name:var(--font-mono-ef)] text-[0.62rem] uppercase tracking-[0.22em] text-[#6f6f6f]">
-          Hover <span className="text-[var(--ef-orange)]">↻</span>
+          Hover <span className="text-[var(--ef-orange)]">↑</span>
         </span>
       </div>
 
@@ -47,7 +47,7 @@ function Front({ s, i }: { s: Service; i: number }) {
 
 function Back({ s }: { s: Service }) {
   return (
-    <div className="ef-notch-tl relative flex h-full flex-col justify-between overflow-hidden bg-[var(--ef-orange)] p-6 text-white sm:p-7">
+    <div className="relative flex h-full flex-col justify-between overflow-hidden bg-[var(--ef-orange)] p-6 text-white sm:p-7">
       <div>
         <span className="font-[family-name:var(--font-mono-ef)] text-[0.68rem] tracking-[0.2em] text-black/55">
           {s.no} / INSIDE
@@ -105,8 +105,8 @@ export function Services() {
           {services.map((s, i) => (
             <motion.div
               key={s.no}
-              initial={reduce ? false : { opacity: 0, y: 44, rotateX: 12 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              initial={reduce ? false : { opacity: 0, y: 44 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{
                 duration: 0.8,
@@ -115,10 +115,9 @@ export function Services() {
               }}
               className="mx-auto w-full max-w-[330px] sm:max-w-none"
             >
-              <FlipCard
+              <RevealCard
                 label={s.name}
                 aspect="3 / 4"
-                flipOnHover
                 front={<Front s={s} i={i} />}
                 back={<Back s={s} />}
               />
@@ -128,7 +127,7 @@ export function Services() {
 
         <Reveal delay={0.2}>
           <p className="mt-8 text-center font-[family-name:var(--font-mono-ef)] text-[0.65rem] uppercase tracking-[0.22em] text-[#6f6f6f]">
-            Hover a card to flip it · tap on touch
+            Hover a card to open it · tap on touch
           </p>
         </Reveal>
       </div>

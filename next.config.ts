@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    // Temporary photography — swap for real ExcelFast imagery before launch.
+    // Temporary photography. Swap for real ExcelFast imagery before launch.
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
   },
 };

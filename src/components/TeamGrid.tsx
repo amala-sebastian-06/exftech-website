@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { FlipCard } from "./FlipCard";
+import { RevealCard } from "./RevealCard";
 import { Reveal, RevealWords } from "./motion-primitives";
 import { team, type Member } from "@/data/team";
 
@@ -41,7 +41,7 @@ function Front({ m }: { m: Member }) {
 
 function Back({ m }: { m: Member }) {
   return (
-    <div className="ef-notch-tl flex h-full flex-col justify-between bg-[var(--ef-orange)] p-6 text-white sm:p-7">
+    <div className="flex h-full flex-col justify-between bg-[var(--ef-orange)] p-6 text-white sm:p-7">
       <div>
         <span className="font-[family-name:var(--font-mono-ef)] text-[0.65rem] tracking-[0.2em] text-black/55">
           {m.empId}
@@ -85,23 +85,22 @@ export function TeamGrid({
           </div>
           <Reveal delay={0.15}>
             <p className="max-w-[40ch] text-[0.95rem] leading-relaxed text-[#9e9e9e]">
-              Hover to tilt, click anyone to see what they work on.
+              Hover or tap anyone to see what they work on.
             </p>
           </Reveal>
         </div>
 
         {featured && (
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 40, rotateX: 12 }}
-            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            initial={reduce ? false : { opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mx-auto mt-16 w-full max-w-[300px] sm:max-w-[340px]"
           >
-            <FlipCard
+            <RevealCard
               label={`${featured.firstName} ${featured.lastName}`}
               aspect="3 / 4"
-              tiltStrength={9}
               front={<Front m={featured} />}
               back={<Back m={featured} />}
             />
@@ -112,8 +111,8 @@ export function TeamGrid({
           {rest.map((m, i) => (
             <motion.div
               key={`${m.empId}-${i}`}
-              initial={reduce ? false : { opacity: 0, y: 40, rotateX: 12 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              initial={reduce ? false : { opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{
                 duration: 0.8,
@@ -121,11 +120,10 @@ export function TeamGrid({
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <FlipCard
+              <RevealCard
                 label={`${m.firstName} ${m.lastName}`}
                 aspect="3 / 4"
-                tiltStrength={9}
-                front={<Front m={m} />}
+                  front={<Front m={m} />}
                 back={<Back m={m} />}
               />
             </motion.div>

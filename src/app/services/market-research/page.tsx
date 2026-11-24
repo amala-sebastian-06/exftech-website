@@ -9,7 +9,7 @@ import { marketResearch as mr } from "@/data/site";
 export const metadata: Metadata = {
   title: "Market Research | Excelfast Advanced Technologies",
   description:
-    "Market, competitor and customer research for industrial companies — run by engineers, from first question to execution.",
+    "Market, competitor and customer research for industrial companies, run by engineers from first question to execution.",
 };
 
 export default function MarketResearchPage() {

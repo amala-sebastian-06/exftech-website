@@ -55,7 +55,7 @@ export function AboutUs() {
             <Reveal delay={0.2}>
               <p className="ef-lede">
                 From our base in the Pithampur industrial belt we run engineering,
-                MRO, assembly, distribution and R&amp;D under one roof — close enough
+                MRO, assembly, distribution and R&amp;D under one roof, close enough
                 to India&rsquo;s manufacturing corridor that we can be on your floor
                 the same day.
               </p>

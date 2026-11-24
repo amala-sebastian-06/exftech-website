@@ -23,7 +23,7 @@ export function TeamPhoto() {
           </div>
           <Reveal delay={0.14}>
             <p className="max-w-[44ch] text-[0.92rem] leading-relaxed text-[#9e9e9e]">
-              Engineering, electronics, fabrication and service — one floor, one
+              Engineering, electronics, fabrication and service. One floor, one
               team, one standard.
             </p>
           </Reveal>
@@ -33,7 +33,7 @@ export function TeamPhoto() {
       {/* Full-bleed, black and white.
           The photo is 4:3 and shown whole on small screens. On wider screens the
           frame is 16:9 and anchored to the bottom, so the only thing trimmed is
-          empty ceiling — never a person, and never anything at the sides.
+          empty ceiling and never a person, and never anything at the sides.
           The reveal is a clip wipe, never a zoom, for the same reason. */}
       <motion.div
         initial={reduce ? false : { clipPath: "inset(12% 0 12% 0)" }}

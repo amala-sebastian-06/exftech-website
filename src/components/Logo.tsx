@@ -1,5 +1,5 @@
 /**
- * ExcelFast mark — the brand logo artwork, background pre-cut to transparent.
+ * ExcelFast mark: the brand logo artwork, background pre-cut to transparent.
  */
 export function Mark({ className = "" }: { className?: string }) {
   return (

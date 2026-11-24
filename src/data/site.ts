@@ -56,7 +56,7 @@ export const services: Service[] = [
   {
     no: "02",
     name: "MRO Services",
-    desc: "Industrial 3D printer repair, diagnostics, preventive maintenance, spares and on-site support — machines back in production.",
+    desc: "Industrial 3D printer repair, diagnostics, preventive maintenance, spares and on-site support to get machines back in production.",
     href: "#mro",
     icon: "wrench",
     detail: [
@@ -123,10 +123,10 @@ export const services: Service[] = [
 export const marketResearch = {
   eyebrow: "Market research / Decisions backed by evidence",
   title: "We support companies with market research that engineers can trust.",
-  lede: "Most market research is written by people who have never opened a machine. Ours is run by the same engineers who design, repair and source industrial equipment — so the questions we ask, and the answers we bring back, hold up on the shop floor as well as in the boardroom.",
+  lede: "Most market research is written by people who have never opened a machine. Ours is run by the same engineers who design, repair and source industrial equipment, so the questions we ask, and the answers we bring back, hold up on the shop floor as well as in the boardroom.",
   intro: [
     "Whether you are launching a new industrial product, entering a new region or segment, evaluating a supplier, or deciding whether a technology is worth adopting, we help you replace assumptions with evidence.",
-    "We work with manufacturers, OEMs, distributors, start-ups and technology suppliers — scoping the research around the decision you actually need to make, not a generic report template.",
+    "We work with manufacturers, OEMs, distributors, start-ups and technology suppliers, scoping the research around the decision you actually need to make, not a generic report template.",
   ],
   areas: [
     {
@@ -152,7 +152,7 @@ export const marketResearch = {
     {
       n: "03",
       t: "Customer & voice-of-the-plant research",
-      d: "Structured conversations with the engineers, maintenance heads and buyers who actually use and purchase the equipment — capturing real pain points, buying criteria and unmet needs.",
+      d: "Structured conversations with the engineers, maintenance heads and buyers who actually use and purchase the equipment, capturing real pain points, buying criteria and unmet needs.",
       points: [
         "Interviews and on-site discussions",
         "Surveys and buying-criteria ranking",
@@ -162,7 +162,7 @@ export const marketResearch = {
     {
       n: "04",
       t: "Product & technology feasibility",
-      d: "Before you commit to development or import, we test whether a product or technology fits the market — technically, commercially and operationally.",
+      d: "Before you commit to development or import, we test whether a product or technology fits the market: technically, commercially and operationally.",
       points: [
         "Product-market fit and concept validation",
         "Technology scouting and comparison",
@@ -172,7 +172,7 @@ export const marketResearch = {
     {
       n: "05",
       t: "Supplier, sourcing & distribution landscape",
-      d: "A clear view of who makes what, lead times, cost structure and channel options — so sourcing and distribution decisions are made with the full picture.",
+      d: "A clear view of who makes what, lead times, cost structure and channel options, so sourcing and distribution decisions are made with the full picture.",
       points: [
         "Vendor identification and shortlisting",
         "Channel and distribution mapping",
@@ -195,7 +195,7 @@ export const marketResearch = {
     { n: "02", t: "Collect", d: "Desk research, expert and customer interviews, surveys and site visits." },
     { n: "03", t: "Analyse", d: "Cross-check sources, size the opportunity and stress-test assumptions." },
     { n: "04", t: "Recommend", d: "Clear findings, options and a recommended course of action." },
-    { n: "05", t: "Support", d: "Stay on through execution — engineering, sourcing or launch support." },
+    { n: "05", t: "Support", d: "Stay on through execution: engineering, sourcing or launch support." },
   ],
   deliverables: [
     "Market and competitor report with sources",
@@ -214,13 +214,13 @@ export const marketResearch = {
     "Industrial distribution",
   ],
   differentiator:
-    "Because we are an engineering and MRO company first, we can take research all the way through — from the first customer conversation to a working prototype, a sourced component or an installed machine.",
+    "Because we are an engineering and MRO company first, we can take research all the way through, from the first customer conversation to a working prototype, a sourced component or an installed machine.",
 };
 
 export const mro = {
   eyebrow: "MRO / Mission-critical support",
   title: "Downtime is an engineering problem. We treat it like one.",
-  lede: "Our MRO approach is built around diagnosis first, precise intervention second, and long-term reliability after that—not just replacing parts and moving on.",
+  lede: "Our MRO approach is built around diagnosis first, precise intervention second, and long-term reliability after that, not just replacing parts and moving on.",
   panelLabel: "MRO Control / service architecture",
   panelTitle: "Keep systems performing",
   items: [
@@ -256,7 +256,7 @@ export const additive = {
 
 export const support = {
   eyebrow: "After-sales / Beyond delivery",
-  title: "Support that starts after the purchase—not support that ends there.",
+  title: "Support that starts after the purchase, not support that ends there.",
   lede: "We stay involved through installation, commissioning, operator training, service, spares and application guidance so technology performs in the real environment it was purchased for.",
   core: ["EXCELFAST", "AFTER-SALES"],
   coreSub: "TECHNICAL CORE",
@@ -396,7 +396,7 @@ export const industries = {
 export const careers = {
   eyebrow: "Careers / Build with us",
   title: "We are building a team of people who like hard engineering problems.",
-  copy: "Mechanical engineers, service specialists, application engineers, automation talent and commercial people who understand technology—not just titles.",
+  copy: "Mechanical engineers, service specialists, application engineers, automation talent and commercial people who understand technology, not just titles.",
   cta: "Send your CV",
   ctaHref: "mailto:careers@exftech.com",
   email: "careers@exftech.com",

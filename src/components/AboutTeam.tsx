@@ -24,7 +24,7 @@ const values = [
   {
     n: "04",
     k: "Support starts after the sale",
-    v: "Installation, training, spares and application guidance — we stay on the line long after the delivery note.",
+    v: "Installation, training, spares and application guidance. We stay on the line long after the delivery note.",
   },
 ];
 

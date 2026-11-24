@@ -164,14 +164,14 @@ export function Contact() {
               >
                 <span className="relative z-10">
                   {sent
-                    ? "Noted — we'll be in touch"
+                    ? "Noted, we'll be in touch"
                     : "Send technical enquiry →"}
                 </span>
                 <span className="absolute inset-0 -translate-x-full bg-black/25 transition-transform duration-500 group-hover:translate-x-0" />
               </motion.button>
 
               <p className="mt-4 text-center text-[0.7rem] text-[#6f6f6f]">
-                Demo form — connect this to your CRM / email backend before launch.
+                Demo form: connect this to your CRM / email backend before launch.
               </p>
             </form>
           </Reveal>

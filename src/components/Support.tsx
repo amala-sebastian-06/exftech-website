@@ -26,7 +26,7 @@ export function Support() {
           </Reveal>
         </div>
 
-        {/* orbit map — desktop */}
+        {/* orbit map (desktop) */}
         <Reveal delay={0.1}>
           <div className="relative mx-auto mt-20 hidden aspect-square w-full max-w-[620px] sm:block">
             <motion.span
@@ -75,7 +75,7 @@ export function Support() {
           </div>
         </Reveal>
 
-        {/* stacked list — mobile */}
+        {/* stacked list (mobile) */}
         <div className="mt-12 grid gap-px overflow-hidden bg-white/10 sm:hidden">
           <div className="bg-[var(--ef-orange)] p-6 text-center">
             <b className="ef-display block text-[1.05rem] text-white">
